@@ -1,0 +1,6 @@
+@Freels_HostAddress = http://localhost:5243
+
+GET {{Freels_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
