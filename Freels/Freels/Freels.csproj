@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="Maps\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

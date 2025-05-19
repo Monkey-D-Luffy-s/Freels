@@ -29,6 +29,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityUserDb")));
+builder.Services.AddDbContext<ReelsDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("FreelsDataDb")));
 
 
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
@@ -77,9 +79,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseCors("AllowSpecificOrigin");
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthentication();
 
