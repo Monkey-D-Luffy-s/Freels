@@ -42,6 +42,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Freels.Controllers.ReelsController",
+    "Method": "Uploadshort",
+    "RelativePath": "api/Reels/UploadShort",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "Freels.Modals.DTO.ReelsModalDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Freels.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -79,6 +79,37 @@
         }
       }
     },
+    "/api/Reels/UploadShort": {
+      "post": {
+        "tags": [
+          "Reels"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReelsModalDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReelsModalDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReelsModalDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -137,6 +168,58 @@
             "minLength": 1,
             "type": "string",
             "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReelsModalDTO": {
+        "required": [
+          "dislikes",
+          "file",
+          "likes",
+          "postedOn",
+          "userId",
+          "videoDescription",
+          "videoName",
+          "videoURL"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "videoName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "file": {
+            "type": "string",
+            "format": "binary"
+          },
+          "videoDescription": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "postedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "likes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dislikes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "videoURL": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
