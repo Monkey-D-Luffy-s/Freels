@@ -5173,6 +5173,7 @@
       "Microsoft.EntityFrameworkCore >= 9.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.5",
+      "Microsoft.Extensions.Identity.Core >= 8.0.5",
       "Microsoft.IdentityModel.Tokens >= 8.10.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
@@ -5254,6 +5255,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.5, )"
+          },
+          "Microsoft.Extensions.Identity.Core": {
+            "target": "Package",
+            "version": "[8.0.5, )"
           },
           "Microsoft.IdentityModel.Tokens": {
             "target": "Package",

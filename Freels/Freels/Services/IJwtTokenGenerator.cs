@@ -4,6 +4,6 @@ namespace Freels.Services
 {
     public interface IJwtTokenGenerator
     {
-        public string GenerateToken(IdentityUser user);
+        public string GenerateToken(IdentityUser user, string[] roles);
     }
 }
