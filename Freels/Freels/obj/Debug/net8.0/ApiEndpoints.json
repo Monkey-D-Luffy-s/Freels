@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "Freels.Controllers.HallController",
+    "Method": "Login",
+    "RelativePath": "api/Hall/LoginUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUser",
+        "Type": "Freels.Modals.LoginUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Freels.Controllers.HallController",
+    "Method": "Ping",
+    "RelativePath": "api/Hall/Ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Freels.Controllers.HallController",
+    "Method": "Register",
+    "RelativePath": "api/Hall/RegisterUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerUser",
+        "Type": "Freels.Modals.RegisterUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Freels.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
