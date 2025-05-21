@@ -4,6 +4,7 @@ using Freels.Modals.Reels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Freels.Controllers
 {
@@ -23,9 +24,9 @@ namespace Freels.Controllers
 
         [HttpPost]
         [Route("UploadShort")]
-        public async Task<IActionResult> Uploadshort([FromBody] ReelsModalDTO obj )
+        public async Task<IActionResult> Uploadshort([FromForm] IFormFile file, [FromForm] string Title, [FromForm] string userID)
         {
-            if (obj.file != null && obj.file.Length > 0)
+            if (file != null && file.Length > 0)
             {
                 // Path to the uploads folder inside wwwroot
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "videos");
@@ -34,21 +35,21 @@ namespace Freels.Controllers
                 {
                     Directory.CreateDirectory(uploadsFolder);
                 }
-                var fineName = Path.GetFileName(obj.file.FileName);
-                var extension = Path.GetExtension(obj.file.FileName).ToLower();
+                var fineName = Path.GetFileName(file.FileName);
+                var extension = Path.GetExtension(fineName).ToLower();
                 var newFileName = $"{Guid.NewGuid()}{extension}";
                 var filePath = Path.Combine(uploadsFolder, newFileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    await obj.file.CopyToAsync(stream);
+                    await file.CopyToAsync(stream);
                 }
                 ReelsModal reelsModal = new ReelsModal()
                 {
                     Id = Guid.NewGuid(),
-                    VideoName = obj.VideoName,
-                    VideoDescription = obj.VideoDescription,
-                    UserId = obj.UserId,
+                    VideoName = Title,
+                    VideoDescription = fineName,
+                    UserId = Guid.Parse(userID),
                     PostedOn = DateTime.UtcNow,
                     Likes = 0,
                     Dislikes = 0,
@@ -60,6 +61,56 @@ namespace Freels.Controllers
 
             }
             return Ok("Success");
+        }
+
+        [HttpGet]
+        [Route("GetThree")]
+        public async Task<IActionResult> ReturnVideos()
+        {
+
+            List<ReelsModal> reelsModals = await reelsContext.reelsModals
+        .OrderBy(v => Guid.NewGuid()) // Random ordering
+        .Take(3)                      // Pick top 3
+        .Select(v => new ReelsModal
+        {
+            Id = v.Id,
+            VideoName = v.VideoName,
+            VideoDescription = v.VideoDescription,
+            PostedOn = v.PostedOn,
+            UserId=v.UserId,
+            Likes = v.Likes,
+            Dislikes=v.Dislikes,
+            VideoURL = Url.Content($"~/uploads/videos/{v.VideoURL}")
+        })
+        .ToListAsync();
+
+
+            return Ok(reelsModals);
+        }
+
+        [HttpGet]
+        [Route("GetOne")]
+        public async Task<IActionResult> ReturnVideo()
+        {
+
+            List<ReelsModal> reelsModals = await reelsContext.reelsModals
+        .OrderBy(v => Guid.NewGuid())
+        .Take(1)
+        .Select(v => new ReelsModal
+        {
+            Id = v.Id,
+            VideoName = v.VideoName,
+            VideoDescription = v.VideoDescription,
+            PostedOn = v.PostedOn,
+            UserId = v.UserId,
+            Likes = v.Likes,
+            Dislikes = v.Dislikes,
+            VideoURL = Url.Content($"~/uploads/videos/{v.VideoURL}")
+        })
+        .ToListAsync();
+
+
+            return Ok(reelsModals);
         }
     }
 }

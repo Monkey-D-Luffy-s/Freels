@@ -43,6 +43,26 @@
   },
   {
     "ContainingType": "Freels.Controllers.ReelsController",
+    "Method": "ReturnVideo",
+    "RelativePath": "api/Reels/GetOne",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Freels.Controllers.ReelsController",
+    "Method": "ReturnVideos",
+    "RelativePath": "api/Reels/GetThree",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Freels.Controllers.ReelsController",
     "Method": "Uploadshort",
     "RelativePath": "api/Reels/UploadShort",
     "HttpMethod": "POST",
@@ -50,9 +70,44 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "obj",
-        "Type": "Freels.Modals.DTO.ReelsModalDTO",
-        "IsRequired": true
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userID",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

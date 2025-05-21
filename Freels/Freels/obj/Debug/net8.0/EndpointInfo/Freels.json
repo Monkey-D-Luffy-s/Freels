@@ -84,21 +84,47 @@
         "tags": [
           "Reels"
         ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ReelsModalDTO"
+                "type": "string",
+                "format": "binary"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ReelsModalDTO"
+                "type": "string",
+                "format": "binary"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ReelsModalDTO"
+                "type": "string",
+                "format": "binary"
               }
             }
           }
@@ -168,58 +194,6 @@
             "minLength": 1,
             "type": "string",
             "format": "password"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ReelsModalDTO": {
-        "required": [
-          "dislikes",
-          "file",
-          "likes",
-          "postedOn",
-          "userId",
-          "videoDescription",
-          "videoName",
-          "videoURL"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "videoName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "file": {
-            "type": "string",
-            "format": "binary"
-          },
-          "videoDescription": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "postedOn": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "likes": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "dislikes": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "videoURL": {
-            "minLength": 1,
-            "type": "string"
           }
         },
         "additionalProperties": false
