@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\0c78390d-8e6a-471a-b9f8-267552c0ab41.htm",
+      "PackagePath": "staticwebassets\\uploads\\videos\\0c78390d-8e6a-471a-b9f8-267552c0ab41.htm"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\2bba09f4-5f9d-4fb0-8666-85da4869ba1e.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\2bba09f4-5f9d-4fb0-8666-85da4869ba1e.mp4"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\2c70a085-0cca-46af-ba56-14fb2540ebd8.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\2c70a085-0cca-46af-ba56-14fb2540ebd8.mp4"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\30951460-e821-486e-81cc-12c8489ec15a.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\30951460-e821-486e-81cc-12c8489ec15a.mp4"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\51f7ba93-7916-4491-8fd1-2b2fa1d2fe67.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\51f7ba93-7916-4491-8fd1-2b2fa1d2fe67.mp4"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\6858e667-8f25-4509-b2a1-0612220291e2.htm",
+      "PackagePath": "staticwebassets\\uploads\\videos\\6858e667-8f25-4509-b2a1-0612220291e2.htm"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\ade42f58-ae10-4f7e-b3d3-4487058fc7dd.htm",
+      "PackagePath": "staticwebassets\\uploads\\videos\\ade42f58-ae10-4f7e-b3d3-4487058fc7dd.htm"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\e60c24fd-a85a-40c0-8aea-fa3623132a9b.htm",
+      "PackagePath": "staticwebassets\\uploads\\videos\\e60c24fd-a85a-40c0-8aea-fa3623132a9b.htm"
+    },
+    {
+      "Id": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\wwwroot\\uploads\\videos\\fe431266-d9e8-4b6e-81fe-25860f5cce44.htm",
+      "PackagePath": "staticwebassets\\uploads\\videos\\fe431266-d9e8-4b6e-81fe-25860f5cce44.htm"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Freels.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Freels.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Freels.props",
+      "PackagePath": "build\\Freels.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Freels.props",
+      "PackagePath": "buildMultiTargeting\\Freels.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Freels.props",
+      "PackagePath": "buildTransitive\\Freels.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
