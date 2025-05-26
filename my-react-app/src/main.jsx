@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import Navbar from "./components/Navbar.jsx";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import UploadVideo from "./components/UploadVideo.jsx";
 import Reels, { loadReels } from "./components/Reels.jsx";
