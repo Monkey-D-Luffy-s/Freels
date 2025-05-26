@@ -7,8 +7,13 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <div className="navbar-logo">MyApp</div>
-
+        <div className="title">
+          <div className="navbar-logo">Instagram</div>
+        </div>
+        <div className="section1" placeholder="search" type="text">
+          <i class="bi bi-search"></i>
+          <input className="Serachbar"></input>
+        </div>
         <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
           ☰
         </button>

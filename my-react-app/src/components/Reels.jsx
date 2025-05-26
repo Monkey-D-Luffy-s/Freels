@@ -38,7 +38,7 @@ function Reels() {
   return (
     <div className="reelsContainer">
       {videos != null && (
-        <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+        <ul className="list-ul">
           {videos.data.map((video, index) => (
             <li key={video.Id} className="listItem">
               <video
@@ -48,27 +48,28 @@ function Reels() {
                 loop
                 playsInline
                 controls
-                style={{
-                  height: "100vh",
-                  width: "100%",
-                  maxWidth: "400px",
-                  objectFit: "cover",
-                }}
+                className="videoSource"
               />
+              <div className="contents">
+                <div>
+                  <i class="bi bi-heart"></i>
+                  <i class="bi bi-chat"></i>
+                  <i class="bi bi-send"></i>
+                </div>
+                <div>
+                  <i class="bi bi-bookmark"></i>
+                </div>
+              </div>
+              <div className="likes">
+                <p>123 likes</p>
+              </div>
               <div className="itemDetails">
                 <div className="fallowContainer">
                   <p> {video.videoName}</p>
-                  <p className="fallowbutton">fallow</p>
+                  <div className="two-line-ellipsis">
+                    <p>{video.videoDescription}</p>
+                  </div>
                 </div>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    textOverflow: "ellipsis",
-                    overflow: "hidden",
-                  }}
-                >
-                  {video.videoDescription}
-                </p>
               </div>
             </li>
           ))}
