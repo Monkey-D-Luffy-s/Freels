@@ -27,5 +27,7 @@ namespace Freels.Modals.DTO
         [Required]
 
         public string VideoURL { get; set; }
+
+        public int commentCount { get; set; }
     }
 }

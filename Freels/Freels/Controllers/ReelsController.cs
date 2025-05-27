@@ -84,8 +84,28 @@ namespace Freels.Controllers
         })
         .ToListAsync();
 
+            List<ReelsModalDTO> reelsModalDTO = new List<ReelsModalDTO>();
 
-            return Ok(reelsModals);
+            foreach(var reel in reelsModals)
+            {
+                ReelsModalDTO temp = new ReelsModalDTO()
+                {
+                    Id = reel.Id,
+                    VideoName = reel.VideoName,
+                    VideoDescription = reel.VideoDescription,
+                    UserId = reel.UserId,
+                    PostedOn = reel.PostedOn,
+                    Likes = reel.Likes,
+                    Dislikes = reel.Dislikes,
+                    VideoURL = reel.VideoURL,
+                    commentCount = Convert.ToInt32(await reelsContext.commentsModals.CountAsync(r => r.UserId == reel.UserId)),
+                };
+                
+                reelsModalDTO.Add(temp);
+            }
+
+
+            return Ok(reelsModalDTO);
         }
 
         [HttpGet]
