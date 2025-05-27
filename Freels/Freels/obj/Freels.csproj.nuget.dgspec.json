@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\Freels.csproj": {}
+    "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\Incidents\\Freels\\Freels\\Freels\\Freels\\Freels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\Freels.csproj": {
+    "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\Incidents\\Freels\\Freels\\Freels\\Freels\\Freels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\Freels.csproj",
+        "projectUniqueName": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\Incidents\\Freels\\Freels\\Freels\\Freels\\Freels.csproj",
         "projectName": "Freels",
-        "projectPath": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\Freels.csproj",
+        "projectPath": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\Incidents\\Freels\\Freels\\Freels\\Freels\\Freels.csproj",
         "packagesPath": "C:\\Users\\v-sbilla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\KW\\Freels\\Freels\\Freels\\Freels\\obj\\",
+        "outputPath": "C:\\Users\\v-sbilla\\OneDrive - Microsoft\\Desktop\\Incidents\\Freels\\Freels\\Freels\\Freels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,6 +75,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",

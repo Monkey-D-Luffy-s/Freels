@@ -13,22 +13,22 @@ namespace Freels.Services.Token
         {
             _config = config;
         }
-        public string GenerateToken(IdentityUser user)
+        public string GenerateToken(IdentityUser user, string[] roles)
         {
-            var claims = new[]
+            var claims = new List<Claim>();
+            claims.Add(new Claim(ClaimTypes.Email, user.Email));
+            foreach(var role in roles)
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: _config["Jwt:Issuer"],
-                audience: _config["Jwt:Audience"],
+                issuer: _config["jwt:Issuer"],
+                audience: _config["jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_config["Jwt:DurationInMinutes"])),
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_config["jwt:DurationInMinutes"])),
                 signingCredentials: creds
                 );
 
