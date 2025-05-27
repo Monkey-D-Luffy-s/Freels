@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Freels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+073a0ed22fb0973972267ee2d457f923d9bb5b1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bea4dd63eb1795df740857f6e54e164949fcd174")]
 [assembly: System.Reflection.AssemblyProductAttribute("Freels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Freels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import logo from "../../public/logo.png";
+import Search from "./Search";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,15 +10,11 @@ function Navbar() {
     <div>
       <nav className="navbar">
         <div className="title">
-          <div className="navbar-logo">Instagram</div>
+          <div className="navbar-logo">
+            <img src={logo} alt="Logo" />
+          </div>
         </div>
-        <div className="section1" placeholder="search" type="text">
-          <i class="bi bi-search"></i>
-          <input className="Serachbar"></input>
-        </div>
-        <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
-          ☰
-        </button>
+        <Search />
 
         <div className={`navbar-links ${isOpen ? "open" : ""}`}>
           <Link to="/" onClick={() => setIsOpen(false)}>
