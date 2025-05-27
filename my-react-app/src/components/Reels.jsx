@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
+import AddComment from "./AddComment";
+import ViewComment from "./ViewComment";
+import ItemDetails from "./ItemDetails";
+import Contents from "./contents";
 
 const baseurl = "https://localhost:7001";
 function Reels() {
   const videos = useLoaderData();
+  console.log(videos);
   const videoRefs = useRef([]);
 
   useEffect(() => {
@@ -41,36 +46,28 @@ function Reels() {
         <ul className="list-ul">
           {videos.data.map((video, index) => (
             <li key={video.Id} className="listItem">
-              <video
-                ref={(el) => (videoRefs.current[index] = el)}
-                src={`${baseurl}${video.videoURL}`}
-                muted
-                loop
-                playsInline
-                controls
-                className="videoSource"
-              />
-              <div className="contents">
-                <div>
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-chat"></i>
-                  <i class="bi bi-send"></i>
-                </div>
-                <div>
-                  <i class="bi bi-bookmark"></i>
-                </div>
+              <div className="videoContainer">
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={`${baseurl}${video.videoURL}`}
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  className="videoSource"
+                />
               </div>
+              <Contents />
               <div className="likes">
-                <p>123 likes</p>
+                <p>{video.likes} likes</p>
               </div>
-              <div className="itemDetails">
-                <div className="fallowContainer">
-                  <p> {video.videoName}</p>
-                  <div className="two-line-ellipsis">
-                    <p>{video.videoDescription}</p>
-                  </div>
-                </div>
-              </div>
+              <ItemDetails
+                name={video.videoName}
+                description={video.videoDescription}
+              />
+              <ViewComment count={video.commentCount} />
+              <AddComment />
+              {/* {video.comments.count} */}
             </li>
           ))}
         </ul>
